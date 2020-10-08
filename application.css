@@ -1,0 +1,64 @@
+body{
+	width: 95%;
+	max-width: 700px;
+	margin: auto;
+	font-family: "Baloo Tamma 2";
+	line-height: 1.5;
+	color: white;
+	background-color: black;
+	margin-bottom: 23px;
+    background-image: url(matrix-bg.gif);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+main{
+	background: #242424e8;
+	padding: 5px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.group-name, .headline, .prof-name{
+	margin: 0;
+	text-align: center;
+}
+
+.concerts{
+	text-align: center;
+	width: 100%;
+}
+
+.concerts table{
+	background: #308a25;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	border: 2px solid black;
+	margin: 10px auto;
+}
+
+td{
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 10px;
+	color: black;
+}
+
+th{
+	text-align: center;
+	padding: 50px;
+	border-radius: 10px;
+}
+
+tr{
+	color: black;
+}
+
+.logo {
+	width: 100%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	flex-direction: column;
+}
