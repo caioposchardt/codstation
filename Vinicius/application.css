@@ -1,0 +1,19 @@
+body{
+	width: 70%;
+	margin: auto;
+	background-image: url(background.gif);
+	font-family: "Baloo Tamma 2";
+	line-height: 1.5;
+	color: white;
+}
+main{
+	background: #8080807a;
+	border-radius: 30px;
+
+}
+
+.informations, .picture, .audio, .video, .link, .name{
+	text-align: center;
+	color: white;
+}
+
