@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab2.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 <a href="Caio/Home_Caio.html">Saiba Mais.</a></div>	
+				<div> Denes Leal dos Santos RA: 11032714 <a href="Denes/Home_Denes.html">Saiba Mais.</a></div>
+				<div> Leonardo Alves Ferretti RA: 11119715 <a href="Leonardo/Home_Leonardo.html">Saiba Mais.</a></div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 <a href="Sergio/Home_Sergio.html">Saiba Mais.</a> </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 <a href="Vinicius/Home_Vinicius.html	">Saiba Mais.</a></div>
+				<hr/>
+				<h2>Laboratório 2 - Imagem e Captura de Vídeo</h2>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Open Collapsible</button>
+				<div class="content">
+				<p>Lorem ipsum...</p>
+				</div>
+
+				<ol class="text">
+					<li>Objetivos</li>
+					<div>
+						• Iniciar os trabalhos com o Google Colab e o OpenCV <br/>
+						• Visualizar imagens e alterar a resolução delas <br/>
+						• Gravar um Vídeo e mostrá-lo no Colab <br/>
+					</div>
+					<li><b>PARTE 1.</b> Preparando o Ambiente, e atividades INICIAIS:</li>
+					<div>
+						a) Coloque os arquivos desta aula do Tidia4 numa pasta do seu Google Drive; <br/>
+						b) Abra o Google Colab, direto do navegador na Internet; <br/>
+						c) Abra o notebook (.ipynb) fornecido e vá seguindo as instruções. <br/>
+					</div>
+					<li><b>PARTE 2</b>: Obtenção de Fotos e Vídeos.</li>
+					<di>
+						a) Montem uma foto geral com TODOS os integrantes do GRUPO, sendo que cada um deve usar uma roupa de
+						cor diferente, melhor se for com as cores Vermelho, Verde e Azul destacadas. Cuidem para a iluminação ficar
+						boa. Logicamente podem usar qualquer editor de imagem para “Compor” as fotos individuais que cada um
+						vai tirar... <br/>
+						b) Façam uma segunda foto-montagem, substituindo cada um por um “Avatar”. Meu “Avatar” por exemplo, é o
+						Pikachu... Novamente, podem editar a gosto.<br/>
+						c) Filmem e editem DOIS vídeos:<br/>
+						i) um com mudanças lentas de movimento;<br/>
+						ii) e outro com mudanças rápidas de movimento.<br/>
+						iii) Em cada um dos vídeos os membros do grupo DEVEM ser diferentes. Podem ser apenas dois membros,
+						um em cada vídeo, e sugiro escolherem os que possuem as melhores câmeras.<br/>
+						
+					</di>
+					<li><b>PARTE 3</b>: Processamento Básico nas Imagens e Vídeos e Relatório em HTML5.</li>
+					<div>
+
+					</div>
+				  </ol>  
+			</div>
+		</main>
+
+
+		<!-- <script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+				  content.style.maxHeight = null;
+				} else {
+				  content.style.maxHeight = content.scrollHeight + "px";
+				}
+			  });
+			}
+		</script> -->
+
+	</body>
+</html>
