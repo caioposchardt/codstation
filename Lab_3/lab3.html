@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab3.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 3 - Codicação de Imagem por DCT e Animação</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/19sEa7xrXG0WkTsQc7ca6ukdF6KiKPsLC?usp=sharing" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+
+				</div>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							• Codificar e comparar imagens com o Google Colab <br/>
+							• Aplicar conceitos de animação com o Blender <br/>
+						</div>
+						<li><b>PARTE 1.</b> Codificação de Imagem por DCT:</li>
+						<div>
+							a) Separar os canais e re-arranjar para formar imagem RGB; <br/>
+							b) Imprimir cores trocadas (BGR) e reais (RGB); <br/>
+							c) Converter para os formatos YCrCb e HSV; <br/>
+							c) Separar as Camadas RGB individualmente; <br/>
+							c) Separar dos Canais YCbCr; <br/>
+						</div>
+						<li><b>PARTE 2.</b> Codificação de Imagens do grupo por DCT:</li>
+						<div>
+							a) Realizar o mesmo processo da parte 1 com as imagens individuais de cada pessoa do grupo e também com a montagem; <br/>
+							b) Realizar compressão de imagens com perda e montar uma tabela comparativa; <br/>
+							c) Realizar alterações em imagens utilizando DCT; <br/>	
+						</div>
+						<li><b>PARTE 3.</b> Animação no Blender:</li>
+						<div>
+							a) colocar na sua página uma animação feita em Blender, com a melhoria da iluminação; <br/>
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Codificação de Imagens do grupo por DCT</button>
+				<div class="content">
+					<br/>
+					Para a seção de codificação de imagem, inicialmente foram realizadas uma série de modificações nas imagens dos integrantes do grupo e da colagem do grupo. O procedimento é explicado no áudio abaixo:
+					<div class="audio-container">
+						<audio controls >
+							<source src="Audio/Explicacao_Videos.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					Segue também uma imagem exemplo com as modificações na imagem do grupo:
+					<img src="Imgs/grupo_modificacoes.png" alt="grupo_original" class="img-report">
+					<figcaption>Fig.1 - Imagens do grupo modificadas.</figcaption>
+					<br/>
+					Além disso, foi realizado um procedimento de compressão das imagens como explicado no áudio abaixo:
+					<div class="audio-container">
+						<audio controls >
+							<source src="Audio/Explicacao_Videos.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					Segue também uma tabela comparativa relacionando os tamanhos originais e comprimidos das imagens em bytes:
+					<img src="Imgs/tabela_compressao.png" alt="grupo_original" class="img-report">
+					<figcaption>Fig.2 - Tabela de compressão.</figcaption>
+					<br/>
+
+					Segue ainda uma imagem mostrando a colagem do grupo no seu tamanho original e também comprimida num fator de 25 e 05
+					<img src="Imgs/grupo_compressao.png" alt="grupo_original" class="img-report">
+					<figcaption>Fig.3 - Imagens do grupo comprimidas.</figcaption>
+					<br/>
+
+					As demais imagens e códigos de python se encontram na página do Collab.
+					<br/>
+
+					Por fim, foram realizadas operações envolvendo a DCT [...]
+				</div>
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Animação no Blender</button>
+				<div class="content">
+					<br/>
+					<div>
+						A parte 3 do laboratório envolve a criação de uma animação no blender. O processo está detalhado no áudio abaixo:
+						<div class="audio-container">
+							<audio controls >
+								<source src="Audio/Explicacao_Videos.ogg" type="audio/ogg">
+							</audio>
+						</div>
+						A animação criada pelo grupo está apresentada abaixo: <br />
+						<video class="video-container" width="320" height="240" controls>
+							<source src="Video/Animacao.mp4" type="video/mp4">
+						</video>
+					</div>
+					<br/>
+				</div>
+			</div>
+		</main>
+
+	</body>
+</html>
