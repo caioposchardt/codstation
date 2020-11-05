@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab4.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 4 - Codicação de Imagem com DWT</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/1ILkLDiWk02cXeLSyaKONBr_Ya4056wPr?usp=sharing#scrollTo=H1azWupWxHbD" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+
+				</div>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Efetuar a Codicação de Imagem e a Decodicação por DWT e IDWT <br />
+							2. Testar funções de Codicação Multinível <br />
+							3. Vericar a taxa de compressão só com a Componente de Aproximação <br />
+
+						</div>
+						<li>Instruções Detalhadas</li>
+						<div>
+							B. Monte o seu google drive e verique os seus arquivos <br />
+							C. Codicação de Luminância (P&B) com DWT para a Pimentas <br />
+							C.1 Cálculo do Erro Quadrático Médio (MSE) e da Relação Sinal Ruído de Pico (PSNR) <br />
+							D. Teste das Funções de Multiresolução wavedec2() e waverec2 <br />
+							E. Efetuar uma "Montagem" com wavedec2() e wavedecn() <br />
+							F. Reconstrução de Imagem Colorida <br />
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Codificação e Decodificação por DWT</button>
+				<div class="content">
+					<br/>
+					Para a seção de codificação de imagem, as imagens do grupo foram codificadas e decodificadas através da DWT. O procedimento é explicado no áudio abaixo:
+					<div class="audio-container">
+						<audio controls >
+							<source src="Audio/Parte 1 - DWT.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					Segue também uma imagem exemplo com as modificações na imagem do grupo:
+					<img src="Imgs/DWT.png" alt="grupo_original" class="img-report">
+					<figcaption>Fig.1 - Imagens do grupo modificadas.</figcaption>
+					<br/>
+
+					As demais imagens e códigos de python se encontram na página do Collab.
+					<br/>
+
+					
+				</div>
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Codificação Multinível</button>
+				<div class="content">
+					<br/>
+					<div>
+						Para a parte 2, foram exploradas duas formas de codificação Multinível. O processo está detalhado no áudio abaixo:
+						<div class="audio-container">
+							<audio controls >
+								<source src="Audio/Parte 2 - Cod Multinivel.ogg" type="audio/mp4">
+							</audio>
+						</div>
+						<div class="audio-container">
+							<audio controls >
+								<source src="Audio/Parte 2.2 - Cod Multinivel.ogg" type="audio/mp4">
+							</audio>
+						</div>
+						Segue abaixo um exemplo de imagem gerada: <br />
+						<img src="Imgs/Multinivel.png" alt="grupo_original" class="img-report">
+						<figcaption>Fig.2 - Codificação Multinivel.</figcaption>
+					<br/>
+					As demais imagens e códigos de python se encontram na página do Collab.
+					<br/>
+					</div>
+					<br/>
+				</div>
+
+			</div>
+			<br/>
+			<button type="button" onclick="ControlCollapse()" class="collapsible">Reconstrução Imagem</button>
+			<div class="content">
+				<br/>
+				<div>
+					Para a parte final, as imagens foram reconstruídas em 3 diferentes planos. O processo está detalhado no áudio abaixo:
+					<div class="audio-container">
+						<audio controls >
+							<source src="Audio/Parte 3 - Reconstrucao.ogg" type="audio/mp4">
+						</audio>
+					</div>
+					Segue abaixo um exemplo de imagem gerada: <br />
+					<img src="Imgs/Reconstrucao.png" alt="grupo_original" class="img-report">
+					<figcaption>Fig.3 - Reconstrução das Imagens.</figcaption>
+				<br/>
+				</div>
+				<br/>
+				As demais imagens e códigos de python se encontram na página do Collab.
+				<br/>
+			</div>
+			</div>
+		</main>
+
+	</body>
+</html>
