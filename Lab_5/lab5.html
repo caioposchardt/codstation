@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab5.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 5 - Percepção Auditiva</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/14UQmTyNQCz_4SDTbDH_hvRe9-vJabsRT?usp=sharing" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+				</div>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Constatar as características psicoacústicas de pessoas distintas de sensibilidade à intensidade, banda audível e mascaramento harmônico; <br />
+							2. Efetuar alguns procedimentos de medição e aferição acústicos e depois analisá-los. <br />
+						</div>
+						<li>Instruções Detalhadas</li>
+						<div>
+							B. Monte o seu google drive e verique os seus arquivos <br />
+							C. Codicação de Luminância (P&B) com DWT para a Pimentas <br />
+							C.1 Cálculo do Erro Quadrático Médio (MSE) e da Relação Sinal Ruído de Pico (PSNR) <br />
+							D. Teste das Funções de Multiresolução wavedec2() e waverec2 <br />
+							E. Efetuar uma "Montagem" com wavedec2() e wavedecn() <br />
+							F. Reconstrução de Imagem Colorida <br />
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Teste de Audiometria</button>
+				<div class="content">
+					<br/>
+					Para a primeira parte do experimento, cada um dos integrantes do grupo realizou um teste de audição no site <a href="https://hearingtest.online/" target="_blank">Hearing Test</a>
+					A seguir, estão dispostos os resultados individuais e uma discussão a respeitos dos mesmos.
+					<br />
+					<h3>Caio:</h3>
+					<div class="box">
+						<img src="Imgs/Teste 1 - Som PC.png" width="250" height="260"/>
+						<span> Áudio PC </span>
+					</div>
+					<div class="box">
+						<img src="Imgs/Teste 1 - Headset.png" width="250" height="260"/>
+						<span> Headset </span>
+					</div>
+
+					<br />
+					<h3>Denes:</h3>
+
+					<br />
+					<h3>Leonardo:</h3>
+
+					<br />
+					<h3>Sérgio:</h3>
+
+					<br />
+					<h3>Vinícius:</h3>
+					
+					<br />
+					<h3>Conclusões:</h3> aaaaaaaaaaaaaaa
+				</div>
+
+				<br/>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Teste de Faixa audível</button>
+				<div class="content">
+					<br/>
+					Para a segunda parte do experimento, cada um dos membros do grupo realizou um teste de Faixa Audível através de um vídeo do youtube. O vídeo toca uma onda sonora numa faixa de frequência de 20 Hz até 20000 Hz e os integrantes do grupo deveriam
+					marcar os pontos de frequência de audição mínima e máxima. 
+					Os resultados foram registrados e estão apresentados na tabela abaixo:
+					<br />
+					<br />
+					<table>
+						<tr>
+						
+						<td colspan='4'>Faixa Audível</td>
+						</tr>
+						
+						<tr>
+						
+						<td>Aluno</td>
+						<td>Tipo de Medida</td>
+						<td>f_min (Hz)</td>
+						<td>f_max (Hz)</td>
+						</tr>
+						<tr>
+						
+						<td rowspan='3'>Caio</td>
+						<td>PC</td>
+						<td>85</td>
+						<td>3000</td>
+						</tr>
+						<tr>
+						
+						<td>Headset</td>
+						<td>80</td>
+						<td>3000 e 8000</td>
+						</tr>
+						<tr>
+						
+						<td>Celular</td>
+						<td>200</td>
+						<td>2500</td>
+						</tr>
+
+						<td rowspan='3'>Denes</td>
+						<td>PC</td>
+						<td>85</td>
+						<td>3000</td>
+						</tr>
+						<tr>
+						
+						<td>Headset</td>
+						<td>80</td>
+						<td>3000 e 8000</td>
+						</tr>
+						<tr>
+						
+						<td>Celular</td>
+						<td>200</td>
+						<td>2500</td>
+						</tr>
+
+						<td rowspan='3'>Leonardo</td>
+						<td>PC</td>
+						<td>85</td>
+						<td>3000</td>
+						</tr>
+						<tr>
+						
+						<td>Headset</td>
+						<td>80</td>
+						<td>3000 e 8000</td>
+						</tr>
+						<tr>
+						
+						<td>Celular</td>
+						<td>200</td>
+						<td>2500</td>
+						</tr>
+
+						<td rowspan='3'>Sérgio</td>
+						<td>PC</td>
+						<td>85</td>
+						<td>3000</td>
+						</tr>
+						<tr>
+						
+						<td>Headset</td>
+						<td>80</td>
+						<td>3000 e 8000</td>
+						</tr>
+						<tr>
+						
+						<td>Celular</td>
+						<td>200</td>
+						<td>2500</td>
+						</tr>
+
+						<td rowspan='3'>Vinícius</td>
+						<td>PC</td>
+						<td>85</td>
+						<td>3000</td>
+						</tr>
+						<tr>
+						
+						<td>Headset</td>
+						<td>80</td>
+						<td>3000 e 8000</td>
+						</tr>
+						<tr>
+						
+						<td>Celular</td>
+						<td>200</td>
+						<td>2500</td>
+						</tr>
+						
+					</table>
+					<br />
+					Algumas considerações a respeito de cada medição:
+					Foi evidente a diferença entre os diferentes tipos de medida. Isso pode ser explica por exemplo devido ao fato de o vídeo exigir um bom conversor analógico-digital (CAD)
+					a fim de apresentar precisão. Os diferentes modelos de celular, fones e computadores utilizados apresentam diferentes CADs, assim, resultando em dados diferentes.
+					Além disso, outro erro se dá devido à regulagem dos materiais de medida. Não foi possível garantir que o volume do fone estava igual ao do celular, por exemplo, o que também causa imprecisões na medida.
+					<br/>
+				</div>
+
+			</div>
+			<br/>
+			<button type="button" onclick="ControlCollapse()" class="collapsible">Teste de Mascaramento de Tons Harmônicos</button>
+			<div class="content">
+				<br />
+				Nessa parte do experimento, foi estudado o fenômeno do limiar de mascaramento. O limiar de mascaramento é definido como o nível de pressão sonora ao qual um som
+				de teste deve ser reduzido para se tornar inaudível na presença de um sinal mascarador.
+				Para isso, cada um dos participante ouviu dois tons harmônicos, sendo atenuados um em relação ao outro em passos de 3 dB. Foram obtidos os limiares de atuanação para cada par de atenuação para cada participante.
+				Os resultados estão apresentados na tabela abaixo:
+				<br />
+				<br />
+				<table>
+					<tr>
+					
+					<td colspan='4'>Faixa Audível</td>
+					</tr>
+					
+					<tr>
+					
+					<td>Aluno</td>
+					<td>Tom encobridor</td>
+					<td>Tom mascarado</td>
+					<td>Fator de Atenuação</td>
+					</tr>
+					<tr>
+					
+					<td rowspan='2'>Caio</td>
+					<td>2 kHz</td>
+					<td>1.2 kHz</td>
+					<td>15 dB</td>
+					</tr>
+					<tr>
+					
+					<td>1.2 kHz</td>
+					<td>2 kHz</td>
+					<td>15 dB</td>
+					</tr>
+					<tr>
+
+					<td rowspan='2'>Denes</td>
+					<td>2 kHz</td>
+					<td>1.2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+					
+					<td>1.2 kHz</td>
+					<td>2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+
+					<td rowspan='2'>Leonardo</td>
+					<td>2 kHz</td>
+					<td>1.2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+					
+					<td>1.2 kHz</td>
+					<td>2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+
+					<td rowspan='2'>Sérgio</td>
+					<td>2 kHz</td>
+					<td>1.2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+					
+					<td>1.2 kHz</td>
+					<td>2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+
+					<td rowspan='2'>Vinícius</td>
+					<td>2 kHz</td>
+					<td>1.2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+					
+					<td>1.2 kHz</td>
+					<td>2 kHz</td>
+					<td></td>
+					</tr>
+					<tr>
+
+					
+				</table>
+				<br />
+				
+				Com o uso do mascaramento, é possível avaliar independente e precisamente cada orelha, ao aumentar o limiar de audibilidade pela presença de outro som (mascarador) com o objetivo da orelha não-testada não interferir nos resultados obtidos na orelha testada.
+
+			</div>
+			<br/>
+			<button type="button" onclick="ControlCollapse()" class="collapsible">Outro teste psicoacústico</button>
+			<div class="content">
+				
+			</div>
+			<br/>
+			<button type="button" onclick="ControlCollapse()" class="collapsible">Novo resultado de percepção psicoacústica</button>
+			<div class="content">
+				
+			</div>
+
+			<!-- </div> -->
+		</main>
+
+	</body>
+</html>
