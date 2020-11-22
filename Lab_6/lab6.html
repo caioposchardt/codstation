@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab6.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 5 - Percepção Auditiva</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/1aLquglIVJlD09VImXpCGmd0pAMnyIg6E?usp=sharing" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+				</div>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Gravar Arquivos de Áudio com dígitos, números gerais, texto lido e poesia <br />
+							2. Leitura de Arquivos de Áudio e janelamento <br />
+							3. Cálculo das Energias de Tempo Curto <br />
+							4. Cálculo dos Espectrogramas <br />
+							5. Determinação do Pitch, da Frequência Fundamental e das Formantes ( f1  a  f4 ) de Algumas Vogais <br />
+							6. Determinação de fonemas surdos, sonoros, consoantes gerais e plosivos <br />
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">1. Gravar Arquivos de Áudio com dígitos, números gerais, texto lido e poesia</button>
+				<div class="content">
+					<br/>
+					Para a primeira parte do experimento, foram gravados áudios que serão analisados no deccorer do relatório. <br />
+					<div class="audio-container">
+						<p> Dígitos </p>
+						<audio controls >
+							<source src="Audio/Digitos.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					<div class="audio-container">
+						<p> Números Gerais </p>
+						<audio controls >
+							<source src="Audio/Numeros_Gerais.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					<div class="audio-container">
+						<p> Texto Lido </p>
+						<audio controls >
+							<source src="Audio/Texto_Lido.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					<div class="audio-container">
+						<p> Poesia Declamada </p>
+						<audio controls >
+							<source src="Audio/Poesia_Declamada.ogg" type="audio/ogg">
+						</audio>
+					</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">2. Leitura de Arquivos de Áudio e janelamento</button>
+				<div class="content">
+					<br/>
+					Para a parte 2. do experimento foi lido o arquivo de som com a poesia declamada. Abaixo, segue o plot da potência do som pelo tempo:
+					<img src="Imgs/2 - Plot do som completo.png" alt="som_original" class="img-report">
+					<figcaption>Fig.1 - Plot da Onda.</figcaption>
+					<br/>
+
+					Em seguida, foram definidos alguns parâmetros de análise. São eles: <br />
+					Frequência de Amostragem 22050<br />
+					Tamanho do Segmento 882<br />
+					Número de Segmentos no Arquivo 313 . Pontos Soprepostos 441<br />
+
+					E, com isso, também foi possível plotar a janela de Hamming, que está exibida abaixo:<br />
+					<img src="Imgs/2 - Janela_Hamming.png" alt="janela_hamming" class="img-report">
+					<figcaption>Fig.2 - Janela de Hamming.</figcaption>
+				</div>
+
+				
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">3. Energia de Tempo Curto</button>
+				<div class="content">
+				<br />
+
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">4. Espectrogramas</button>
+				<div class="content">
+					<br />
+					
+					<br/>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">5. Determinação do Pitch e da F0</button>
+				<div class="content">
+					<br />
+					
+					<br/>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">6. Determinação de Consoantes e Plosivos</button>
+				<div class="content">
+					<br />
+					
+					<br/>
+				</div>
+
+			<!-- </div> -->
+		</main>
+
+	</body>
+</html>
