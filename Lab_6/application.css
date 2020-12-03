@@ -142,3 +142,10 @@ div.box {
 	width: 290px;
 	display: inline-block;
 }
+
+.advise {
+	color: red;
+    background-color: white;
+    font-size: 22px;
+    text-align: left;
+}
