@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab7.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 7 - Codificação de Voz e Áudio</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://drive.google.com/file/d/1ztq4g778GRWAEATBxagOXUC56tT81lVF/view?usp=sharing" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+				</div>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Determinação dos parâmetros LPC <br />
+							2. Separação Sonora/Surda<br />
+							3. Espectro e Envoltória LP <br />
+							4. Comparação de Codificações MPEG <br />	
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">1. Gravar Arquivos de Áudio com poesia e nome e sobrenome</button>
+				<div class="content">
+					<br/>
+					Para a primeira parte do experimento, foram gravados áudios que serão analisados no deccorer do relatório. <br />
+					<div class="audio-container">
+						<p> Poesia Declamada </p>
+						<audio controls >
+							<source src="Audio/Poesia_Declamada.ogg" type="audio/ogg">
+						</audio>
+					</div>
+					<div class="audio-container">
+						<p> Nome Sobrenome </p>
+						<audio controls >
+							<source src="Audio/Nome_Sobrenome.wav" type="audio/ogg">
+						</audio>
+					</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Análise do Áudio de Poesia</button>
+				<div class="content">
+					<br/>
+					O primeiro áudio analisado foi o da poesia declamada. <br/>
+					Inicialmente, foi plotado o formato de onda do áudio. <br />
+
+					<img src="Imgs/1_Forma_de_onda_poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.1 - Plot da Onda.</figcaption>
+					<br/>
+
+					Em seguida, definiu-se um janelamento, como mostrado abaixo: <br/>
+
+					<img src="Imgs/2_Janelamento_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.2 - Janelamento.</figcaption>
+					<br/>
+
+					Para os cálculos dos parâmetros LPC, separação U/UV e Espectro + Envoltória, foi utilizada somente a primeira estrofe. O plot da estrofe segue abaixo: <br/>
+
+					<img src="Imgs/3_Primeira_Estrofe_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.3 - Corte na primeira estrofe.</figcaption>
+					<br/>
+
+					O primeiro plot realizado foi o de Energia da primeira estrofe, que segue abaixo:
+
+					<img src="Imgs/3_Primeira_Estrofe_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.4 - Energia Primeira Estrofe.</figcaption>
+					<br/>
+
+					Em seguida, foram plotadas curvas que unem a energia do sinal com a distribuição de frequência. <br />
+					Primeiro para os segmentos sonoros: <br />
+
+					<img src="Imgs/5_Segmentos_Sonoros_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.5 - Segmentos sonoros da primeira estrofe.</figcaption>
+					<br/>
+
+					Seguidos pelos segmentos surdos: <br/>
+
+					<img src="Imgs/6_Segmentos_Surdos_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.6 - Segmentos surdos da primeira estrofe.</figcaption>
+					<br/>
+
+					Finalizando a análise da primeira estrofe, foi gerado um Espectrograma, como mostrado abaixo:
+
+					<img src="Imgs/7_Espectrograma_Poesia.png" alt="som_original" class="img-report">
+					<figcaption>Fig.7 - Espectrograma da primeira estrofe.</figcaption>
+					<br/>
+
+					Observando o espectro em vermelho real e a comparando com a linha azul LPC vemos que O LPC analisa o sinal de voz estimando os formantes, removendo seus efeitos do sinal de voz e estimando a intensidade e a frequência do zumbido restante. O processo de remoção dos formantes é chamado de filtragem inversa, e o sinal remanescente após a subtração do sinal modelado filtrado é chamado de resíduo. Codificação preditiva linear
+
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Análise do Áudio de Poesia</button>
+				<div class="content">
+					<br/>
+					
+					A análise do segundo áudio se deu de forma similar. <br/>
+					
+					Para os cálculos dos parâmetros LPC, separação U/UV e Espectro + Envoltória, foi utilizada somente o primeiro. O plot do nome segue abaixo: <br/>
+
+					<img src="Imgs/8_Primeiro_Nome.png" alt="som_original" class="img-report">
+					<figcaption>Fig.8 - Corte na primeiro nome.</figcaption>
+					<br/>
+
+					O primeiro plot realizado foi o de Energia do primeiro nome, que segue abaixo:
+
+					<img src="Imgs/9_Energia_Nome.png" alt="som_original" class="img-report">
+					<figcaption>Fig.9 - Energia Primeiro Nome.</figcaption>
+					<br/>
+
+					Em seguida, foram plotadas curvas que unem a energia do sinal com a distribuição de frequência. <br />
+					Primeiro para os segmentos sonoros: <br />
+
+					<img src="Imgs/10_Sonoros_Nome.png" alt="som_original" class="img-report">
+					<figcaption>Fig.10 - Segmentos sonoros do primeiro nome.</figcaption>
+					<br/>
+
+					Seguidos pelos segmentos surdos: <br/>
+
+					<img src="Imgs/11_Surdos_Nome.png" alt="som_original" class="img-report">
+					<figcaption>Fig.11 - Segmentos surdos do primeiro nome.</figcaption>
+					<br/>
+
+					Finalizando a análise do primeiro nome, foi gerado um Espectrograma, como mostrado abaixo:
+
+					<img src="Imgs/12_Espectrograma_Nome.png" alt="som_original" class="img-report">
+					<figcaption>Fig.12 - Espectrograma do primeiro nome.</figcaption>
+					<br/>
+
+					Como no outro caso, foi possível observar que O LPC analisa o sinal de voz 
+					estimando os formantes, removendo seus efeitos do sinal de voz e estimando a intensidade e a frequência do zumbido restante.
+
+
+				</div>	
+				<br/>
+				
+			<!-- </div> -->
+		</main>
+
+	</body>
+</html>
