@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab8.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 8 - Codificação de Áudio com ffmpeg</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/1inNJiDlZj1b6Cj0jmbsP0ICJMRrG6n4k#scrollTo=8ywOCWSBh4BK" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+				</div>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Conhecer as opções de codificação do ffmpeg <br/>
+							2. Verificar várias taxas mpeg 1, camada 3 e conversão entre codecs<br/>
+							3. Variação de tempo<br/>
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Análises de espectrograma</button>
+				<div class="content">
+					<br/>
+					Segue abaixo os plots de espectrograma da música do Abba fornecida e também do lofi criado. <br />
+					
+					<img src="Imgs/1_Espec_8k.jpeg" alt="som_original" class="img-report">
+					<figcaption>Fig.1 - espectrograma 8kHz.</figcaption>
+					<br/>
+
+					<img src="Imgs/2_Espec_128k.jpeg" alt="som_original" class="img-report">
+					<figcaption>Fig.2 - espectrograma 128kHz.</figcaption>
+					<br/>
+
+					Podemos observar que a principal diferença observada conforme diminuimos a taxa de compressão, é a ausencia de frequências maiores, a 128k haviamos frequencias acima de 10kHz, e em 8k não temos nada acima de 2kHz.
+					<br/>
+
+					<img src="Imgs/3_Espec_Original.jpeg" alt="som_original" class="img-report">
+					<figcaption>Fig.3 - espectrograma Lofi Original.</figcaption>
+					<br/>
+
+					<img src="Imgs/4_Espec_320k.jpeg" alt="som_original" class="img-report">
+					<figcaption>Fig.4 - espectrograma Lofi 320kHz.</figcaption>
+					<br/>
+
+					<img src="Imgs/5_Espect_65k.jpeg" alt="som_original" class="img-report">
+					<figcaption>Fig.5 - espectrograma Lofi 65kHz.</figcaption>
+					<br/>
+
+					Observamos o mesmo com o lofi aqui, onde são perdidas as frequencias agudas da parte do chimbal, porém não foi observada tanta diferença entre as diferentes formas de compressão <br/>					
+				</div>
+
+				<br/>
+				
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Análises de espectrograma com variações de velocidade</button>
+				<div class="content">
+					<br/>
+					Segue abaixo os plots de espectrograma da música do Abba fornecida e também do lofi criado com suas variações de velocidade. <br />
+					
+					<img src="Imgs/6_AbbaOriginal.png" alt="som_original" class="img-report">
+					<figcaption>Fig.6 - espectrograma Abba Rápido.</figcaption>
+					<br/>
+
+					<img src="Imgs/7_AbbaLento.png" alt="som_original" class="img-report">
+					<figcaption>Fig.7 - espectrograma Abba Lento.</figcaption>
+					<br/>
+
+					Comparando os dois espectrogramas, podemos notar que a versão mais rápida no geral possui maior volume (dBs) em geral, por ter as frequencias compactadas. Para esse algoritmo de aceleração/desaceleração, não foi observado mudança nas frequências, que poderia acontecer se as ondas sonoras fossem alongadas ou encolhidas.
+					<br/>
+
+					<img src="Imgs/8_LofiRapido.png" alt="som_original" class="img-report">
+					<figcaption>Fig.8 - Lofi rápido.</figcaption>
+					<br/>
+
+					<img src="Imgs/9_LofiLento.png" alt="som_original" class="img-report">
+					<figcaption>Fig.9 - Lofi lento.</figcaption>
+					<br/>
+
+					O mesmo é observado na música lofi, porém é importante notar também que devido a grande quantidade de equalização e filtragem utilizado nesse estilo musical para deixar com a característica "low fidelity", não vemos frequências acima de 4kHz, e podemos ver demarcado a batida principal na forma do espectrograma. Portanto, fica dificil observar tanto no espectrograma quanto nas formas de onda a diferença entre as diferentes taxas de compressão. <br/>
+
+					<img src="Imgs/10_AbbaRapido.png" alt="som_original" class="img-report">
+					<figcaption>Fig.10 - Forma de onda Abba rápido.</figcaption>
+					<br/>
+
+					<img src="Imgs/11_AbbaLento.png" alt="som_original" class="img-report">
+					<figcaption>Fig.11 - Forma de onda Abba lento.</figcaption>
+					<br/>
+
+					<img src="Imgs/12_LofiRapido.png" alt="som_original" class="img-report">
+					<figcaption>Fig.12 - Forma de onda Lofi rápido.</figcaption>
+					<br/>
+
+					<img src="Imgs/13_LofiLento.png" alt="som_original" class="img-report">
+					<figcaption>Fig.13 - Forma de onda Lofi lento.</figcaption>
+					<br/>
+
+					Comparando as formas de onda tanto das duas versões da música do ABBA quanto nas versões do lofi, podemos observar as mesmas características comentadas no espectrograma, apenas sendo necessário se atentar a escala.<br/>					
+				</div>	
+			<!-- </div> -->
+		</main>
+
+	</body>
+</html>
