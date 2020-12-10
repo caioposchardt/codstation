@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt'>
+	<head>
+		<title>CodStation</title>
+		
+		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap">
+		<script src="lab9.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<div> 
+				<div class="logo">
+					<img src="logo.png" alt="ufabc" width=80 height=55>
+					<h1 class="group-name">CodStation</h1>
+				</div>
+				<hr/>
+				<h2 class="headline">Codificação de Sinais Multimídia</h2>
+				<h3 class="prof-name">Profº Mario Minami</h3>
+				<hr/>
+			</div>
+
+			<div class="concerts">
+				<div> Caio Poschardt Antunes Mello RA: 11038715 </div>	
+				<div> Denes Leal dos Santos RA: 11032714 </div>
+				<div> Leonardo Alves Ferretti RA: 11119715 </div>
+				<div> Sergio Enzo Matsuda Sampa RA: 11011815 </div>
+				<div> Vinicius Viana de Souza RA: 11201722492 </div>
+				<hr/>
+				<h2>Laboratório 9 - MIDI e IR</h2>
+
+				<div>
+					Segue o link do Collab utilizado para colocar os códigos em python e mostrar o resultado dos experimentos:
+					<br/>
+					<a href="https://colab.research.google.com/drive/1bFrtVub4qqNd6D4_bU_l6rmNxgV2efq1?usp=sharing" target="_blank">Acessar Collab.</a></div>
+				</div>
+				<div>
+				</div>
+
+				<button type="button" onclick="ControlCollapse()" class="collapsible">Instruções do Relatório</button>
+				<div class="content">
+				<div class="text">
+					<ol class="text">
+						<li>Objetivos</li>
+						<div>
+							1. Tocar notas e gerar músicas simples <br/>
+							2. Gerar arquivos MIDI <br/>
+							3. Reproduzir arquivos MIDI <br/>
+							4. Simular a reprodução em salas com Respostas Impulsivas diversas <br/>
+						</div>
+					</ol>  
+				</div>
+				</div>
+
+				<br/>
+				<button type="button" onclick="ControlCollapse()" class="collapsible">1. Música Super Mario - Caio</button>
+				<div class="content">
+					<br/>
+					Segue abaixo o plot da música criada a partir da biblioteca Magenta. <br />
+					
+					<img src="Imgs/1_SuperMario.png" alt="som_original" class="img-report">
+					<figcaption>Fig.1 - Plot super mario.</figcaption>
+					<br/>
+					A música pode ser ouvida abaixo: <br/>
+					<div class="audio-container">
+						<p> Audio Original </p>
+						<audio controls >
+							<source src="Audio/super_mario.wav" type="audio/ogg">
+						</audio>
+					</div>
+					A partir da música, foi utilizada a biblioteca IPyhton para convoluir o som com diferentes respostas impulsivas e simular 
+					a música em diferentes ambientes. <br/>
+					Segue abaixo dois exemplos: <br/>
+					<div class="audio-container">
+						<p> Audio Hall </p>
+						<audio controls >
+							<source src="Audio/super_mario_hall.wav" type="audio/ogg">
+						</audio>
+					</div>
+					<div class="audio-container">
+						<p> Audio Igreja </p>
+						<audio controls >
+							<source src="Audio/super_maro_chopin.wav" type="audio/ogg">
+						</audio>
+					</div>
+				</div>				
+			<!-- </div> -->
+		</main>
+
+	</body>
+</html>
